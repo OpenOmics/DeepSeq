@@ -13,8 +13,8 @@ module purge
 module load singularity snakemake
 
 ## To dry run
-sbatch ~/project/methyl-seek-main/pipeline_submit.sh dryrun /path/to/result_dir
+sbatch launch_analysis.sh dryrun /path/to/result_dir
 
 
 ## To execute
-sbatch ~/project/methyl-seek-main/pipeline_submit.sh execute /path/to/result_dir
+sbatch launch_analysis.sh execute /path/to/result_dir
