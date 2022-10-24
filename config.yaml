@@ -1,3 +1,3 @@
-rawdata_dir: /data/NHLBI_IDSS/rawdata/NHLBI-53
-result_dir: /data/NHLBI_IDSS/projects/NHLBI-53
-hg38_fa: /data/NCBR/apps/NPM1_DeepSeq/hg38/Homo_sapiens_assembly38.fasta
+rawdata_dir: /data/NHLBI_IDSS/rawdata/NHLBI-53 #### Update this path to your rawdata folder
+result_dir: /data/NHLBI_IDSS/projects/NHLBI-53 #### Update this path to your project folder
+hg38_fa: /data/OpenOmics/references/DeepSeq/hg38
