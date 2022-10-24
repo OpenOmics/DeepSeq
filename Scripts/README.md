@@ -1,0 +1,1 @@
+This folder contains scripts adopted from https://github.com/ClinicalGenomicsGBG/NPM1_DeepSeq repository. We have modified 'run_NPM1_analysis.sh' script to allow for users to specify temporary directory to populate the intemediate files; and removed date-time stamp from the output file.
