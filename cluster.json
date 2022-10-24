@@ -1,0 +1,10 @@
+#cluster.json
+{
+      "__default__": {
+              "mem": "100g",
+              "time": "2-00:00:00",
+              "partition": "norm",
+              "threads": "8",
+              "gres": "lscratch:200"
+      }
+}
