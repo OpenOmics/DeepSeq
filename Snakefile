@@ -49,5 +49,5 @@ rule run_DeepSeq:
       mkdir -p {params.dir}/NPM1_out
       ln -s {input.in} {output.smlink}
 
-      /data/NCBR/apps/NPM1_DeepSeq/run_NPM1_analysis.sh -f {params.dir} -o {params.dir}/NPM1_out -t /lscratch/$SLURM_JOBID/ -r hg38_fa
+      ./Scripts/run_NPM1_analysis.sh -f {params.dir} -o {params.dir}/NPM1_out -t /lscratch/$SLURM_JOBID/ -r hg38_fa
       """
