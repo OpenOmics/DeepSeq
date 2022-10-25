@@ -10,7 +10,7 @@ module load python/3.7
 module load snakemake/5.13.0
 module load R
 
-cd $SLURM_SUBMIT_DIR
+#cd $SLURM_SUBMIT_DIR
 
 ##
 ## Test commandline arguments
@@ -26,6 +26,7 @@ fi
 
 R=$2
 echo $R
+cd $R
 
 mkdir -p $R/snakejobs
 mkdir -p $R/reports
