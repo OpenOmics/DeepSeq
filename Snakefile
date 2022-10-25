@@ -34,7 +34,7 @@ rule run_DeepSeq:
       file1=join(rawdata_dir, "{samples}_L001_R1_001.fastq.gz"),
       file2=join(rawdata_dir, "{samples}_L001_R2_001.fastq.gz"),
     output:
-      out = join(working_dir, "{samples}/NPM1_out/NPM1_UDS_final_result_{samples}.tsv"),
+      out=join(working_dir, "{samples}/NPM1_out/NPM1_UDS_final_result_{samples}.tsv"),
     params:
       rname="run_DeepSeq",
       dir=directory(join(working_dir, "{samples}/NPM1_out")),
