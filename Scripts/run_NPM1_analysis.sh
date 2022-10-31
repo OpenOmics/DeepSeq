@@ -16,7 +16,7 @@ scriptdir="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 DATE=$(date +"%Y_%m_%d_%H_%M_%S")
 
-while getopts :f:o:r:e:h opt; do
+while getopts :f:o:r:t:e:h opt; do
     case $opt in
         f)
             echo "-f (fastq directory) was input as $OPTARG"
