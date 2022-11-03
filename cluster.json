@@ -1,5 +1,12 @@
 {
       "__default__": {
+              "mem": "1g",
+              "time": "4:00:00",
+              "partition": "quick",
+              "threads": "8",
+              "gres": "lscratch:200"
+      },
+      "run_DeepSeq": {
               "mem": "100g",
               "time": "2-00:00:00",
               "partition": "norm",
