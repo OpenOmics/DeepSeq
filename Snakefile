@@ -28,7 +28,7 @@ rule all:
       expand(join(working_dir, "{samples}/NPM1_out/NPM1_UDS_final_result_{samples}.tsv"), samples=SAMPLES),
       expand(join(working_dir, "{samples}/{samples}_L001_R1_001.fastq.gz"),samples=SAMPLES),
       expand(join(working_dir, "{samples}/{samples}_L001_R2_001.fastq.gz"),samples=SAMPLES),
-
+      join(working_dir, "NPM1_UDS_final_result.tsv")
 
 ## Copy each FASTQ pair to new sample directory and run DeepSeq
 rule raw_data_links:
@@ -67,4 +67,16 @@ rule run_DeepSeq:
       """
       mkdir -p {params.dir}
       ./Scripts/run_NPM1_analysis.sh -f {params.dir} -o {params.dir}/NPM1_out -t /lscratch/$SLURM_JOBID/ -r {hg38_fa}
+      """
+
+rule Concat:
+    input:
+      ins=expand(join(working_dir, "{samples}/NPM1_out/NPM1_UDS_final_result_{samples}.tsv"), samples=SAMPLES),
+    output:
+      out=join(working_dir, "NPM1_UDS_final_result.tsv"),
+    params:
+      rname="Concat",
+    shell:
+      """
+      cat {input.ins} > {output.out}
       """
