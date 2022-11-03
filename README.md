@@ -17,7 +17,7 @@ cd ~/project_directory/DeepSeq
 ```
 rawdata_dir: ~/project_directory/DeepSeq/rawdata #### Update this path to your rawdata folder
 result_dir: ~/project_directory/DeepSeq/output #### Update this path to your project folder
-hg38_fa: /data/OpenOmics/references/DeepSeq/hg38
+hg38_fa: /data/OpenOmics/references/DeepSeq/hg38/Homo_sapiens_assembly38.fasta
 ```
 
 ## To dry run
